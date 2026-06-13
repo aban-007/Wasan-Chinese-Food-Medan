@@ -8,107 +8,37 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background-color: var(--dark);
     color: var(--light);
     text-align: center;
-    position: relative;
 }
 
-/* Updated Header Alignment */
-.header-right {
-    padding: 2mm 20px 5mm 20px;
-    border-bottom: 1px solid var(--gold);
-    text-align: right;
-}
+.header-right { padding: 20px; border-bottom: 1px solid var(--gold); text-align: right; }
+.neon-text { color: var(--neon-red); text-shadow: 0 0 10px #ff0000; font-family: 'Impact', sans-serif; font-size: clamp(2rem, 8vw, 3.5rem); letter-spacing: 5px; text-transform: uppercase; margin: 0; }
+.subtitle { color: var(--gold); font-style: italic; font-size: clamp(1.2rem, 4vw, 2rem); display: block; margin-top: 10px; }
 
-.header-right h1 {
-    margin: 0;
-}
-
-/* NEON EFFECT */
-.neon-text {
-    color: var(--neon-red);
-    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
-    font-family: 'Impact', sans-serif;
-    font-size: 3.5rem;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-}
-
-/* SUBTITLE ADJUSTMENT */
-.subtitle {
-    color: var(--gold);
-    font-style: italic;
-    margin-top: 10mm; /* Set to 10mm as requested */
-    display: block;
-    font-size: 2rem;
-}
-
-/* LOGO MAIN */
-.site-logo {
-    position: fixed;
-    top: 2.5mm;
-    left: 0mm; 
-    width: 25mm;
-    height: 25mm;
-    object-fit: contain;
-    z-index: 1000;
-    cursor: pointer;
-    transition: transform 0.1s ease-out;
-}
-
-/* WHATSAPP LOGO */
-.wa-logo {
-    position: fixed;
-    bottom: 3mm;
-    right: 5mm;
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    z-index: 1000;
-    cursor: pointer;
-    border-radius: 12px;
-    box-sizing: border-box;
-    transition: transform 0.1s ease-out, bottom 0.2s ease-out;
-}
-
-/* KOTAK INDIKATOR NOMOR GAMBAR */
-.img-number-box {
-    position: fixed;
-    bottom: 3mm;
-    left: 5mm; 
-    width: 15mm;
-    height: 15mm;
-    border: 2px solid var(--gold);
-    background-color: rgba(26, 26, 26, 0.8);
-    color: var(--gold);
-    z-index: 1000;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 2rem;
-    box-sizing: border-box;
-    border-radius: 12px;
-    transition: transform 0.1s ease-out, bottom 0.2s ease-out;
-}
-
+/* Responsive Gallery Container */
 .gallery-container {
-    max-width: 1000px;
-    margin: 50px auto 0 auto;
-    position: relative;
-    overflow: hidden;
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    aspect-ratio: 1 / 1; /* Keeps it square, perfect for food photos */
     border: 2px solid var(--gold);
     background: #000;
-    height: 600px;
+    overflow: hidden;
+    position: relative;
 }
 
 .insta-slide { display: none; width: 100%; height: 100%; animation: fadeEffect 1.5s; }
 .insta-slide img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Fixed elements */
+.site-logo { position: fixed; top: 10px; left: 10px; width: 60px; height: 60px; z-index: 1000; }
+.wa-logo { position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; z-index: 1000; }
+.img-number-box { position: fixed; bottom: 20px; left: 20px; width: 50px; height: 50px; border: 2px solid var(--gold); background: rgba(26, 26, 26, 0.8); color: var(--gold); display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 1.2rem; z-index: 1000; }
+
 @keyframes fadeEffect { from {opacity: 0.4;} to {opacity: 1;} }
-.cta-wrapper { padding: 40px 0; display: flex; justify-content: center; }
-.cta-button { padding: 15px 30px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; text-transform: uppercase; }
-.api-note { font-size: 18px; color: var(--gold); margin: 0 20px 20px 20px; }
-footer { padding: 40px; font-size: 1.2rem; color: var(--gold); }
+.cta-button { display: inline-block; padding: 15px 30px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; text-transform: uppercase; }
+.api-note { font-size: 1rem; color: var(--gold); margin: 20px; }
+footer { padding: 20px; font-size: 1rem; color: var(--gold); }
