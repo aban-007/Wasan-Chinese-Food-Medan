@@ -36,6 +36,15 @@ body {
     text-transform: uppercase;
 }
 
+/* SUBTITLE ADJUSTMENT */
+.subtitle {
+    color: var(--gold);
+    font-style: italic;
+    margin-top: 10mm; /* Set to 10mm as requested */
+    display: block;
+    font-size: 2rem;
+}
+
 /* LOGO MAIN */
 .site-logo {
     position: fixed;
@@ -84,14 +93,6 @@ body {
     box-sizing: border-box;
     border-radius: 12px;
     transition: transform 0.1s ease-out, bottom 0.2s ease-out;
-}
-
-.subtitle {
-    color: var(--gold);
-    font-style: italic;
-    margin-top: 10px;
-    display: block;
-    font-size: 2rem;
 }
 
 .gallery-container {
