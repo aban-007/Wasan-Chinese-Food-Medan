@@ -17,7 +17,7 @@ body {
 
 /* Updated Header Alignment */
 .header-right {
-    padding: 2mm 20px 10mm 20px;
+    padding: 2mm 20px 5mm 20px;
     border-bottom: 1px solid var(--gold);
     text-align: right;
 }
@@ -39,7 +39,7 @@ body {
 /* LOGO MAIN */
 .site-logo {
     position: fixed;
-    top: 0mm;
+    top: 5.5mm;
     left: 0mm; 
     width: 25mm;
     height: 25mm;
