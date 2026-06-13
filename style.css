@@ -15,11 +15,25 @@ body {
     position: relative;
 }
 
+/* Updated Header Alignment */
+.header-right {
+    padding: 2mm 20px 5mm 20px;
+    border-bottom: 1px solid var(--gold);
+    text-align: right;
+}
+
+.header-right h1 {
+    margin: 0;
+}
+
 /* NEON EFFECT */
 .neon-text {
     color: var(--neon-red);
     text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
-    font-family: 'Impact', sans-serif; /* Adjusted to match a bold neon look */
+    font-family: 'Impact', sans-serif;
+    font-size: 3.5rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
 }
 
 /* LOGO MAIN */
@@ -72,28 +86,6 @@ body {
     transition: transform 0.1s ease-out, bottom 0.2s ease-out;
 }
 
-@keyframes waBounce {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-5mm); }
-    100% { transform: translateY(0); }
-}
-
-.wa-bounce-active {
-    animation: waBounce 0.3s ease-in-out;
-}
-
-header {
-    padding: 2mm 20px 5mm 20px;
-    border-bottom: 1px solid var(--gold);
-}
-
-h1 {
-    font-size: 3.5rem;
-    letter-spacing: 5px;
-    margin: 0;
-    text-transform: uppercase;
-}
-
 .subtitle {
     color: var(--gold);
     font-style: italic;
@@ -102,7 +94,6 @@ h1 {
     font-size: 2rem;
 }
 
-/* Gallery and other styles remain same as your original file */
 .gallery-container {
     max-width: 1000px;
     margin: 50px auto 0 auto;
@@ -113,24 +104,9 @@ h1 {
     height: 600px;
 }
 
-.insta-slide {
-    display: none;
-    width: 100%;
-    height: 100%;
-    animation: fadeEffect 1.5s;
-}
-
-.insta-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-@keyframes fadeEffect {
-    from {opacity: 0.4;} 
-    to {opacity: 1;}
-}
-
+.insta-slide { display: none; width: 100%; height: 100%; animation: fadeEffect 1.5s; }
+.insta-slide img { width: 100%; height: 100%; object-fit: cover; }
+@keyframes fadeEffect { from {opacity: 0.4;} to {opacity: 1;} }
 .cta-wrapper { padding: 40px 0; display: flex; justify-content: center; }
 .cta-button { padding: 15px 30px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; text-transform: uppercase; }
 .api-note { font-size: 18px; color: var(--gold); margin: 0 20px 20px 20px; }
