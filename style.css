@@ -2,17 +2,24 @@
     --gold: #c5a059;
     --dark: #1a1a1a;
     --light: #ffffff;
-    --gray: #f4f4f4;
+    --neon-red: #ff0000;
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--dark);
     color: var(--light);
     text-align: center;
     position: relative;
+}
+
+/* NEON EFFECT */
+.neon-text {
+    color: var(--neon-red);
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
+    font-family: 'Impact', sans-serif; /* Adjusted to match a bold neon look */
 }
 
 /* LOGO MAIN */
@@ -43,7 +50,7 @@ body {
     transition: transform 0.1s ease-out, bottom 0.2s ease-out;
 }
 
-/* KOTAK INDIKATOR NOMOR GAMBAR BARU */
+/* KOTAK INDIKATOR NOMOR GAMBAR */
 .img-number-box {
     position: fixed;
     bottom: 3mm;
@@ -65,7 +72,6 @@ body {
     transition: transform 0.1s ease-out, bottom 0.2s ease-out;
 }
 
-/* Animasi klik: naik 5mm lalu kembali */
 @keyframes waBounce {
     0% { transform: translateY(0); }
     50% { transform: translateY(-5mm); }
@@ -82,7 +88,7 @@ header {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     letter-spacing: 5px;
     margin: 0;
     text-transform: uppercase;
@@ -93,10 +99,10 @@ h1 {
     font-style: italic;
     margin-top: 10px;
     display: block;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
-/* Container Galeri */
+/* Gallery and other styles remain same as your original file */
 .gallery-container {
     max-width: 1000px;
     margin: 50px auto 0 auto;
@@ -107,7 +113,6 @@ h1 {
     height: 600px;
 }
 
-/* Simulasi Instagram Post */
 .insta-slide {
     display: none;
     width: 100%;
@@ -115,7 +120,7 @@ h1 {
     animation: fadeEffect 1.5s;
 }
 
-.insta-slide img, .insta-slide video {
+.insta-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -126,40 +131,7 @@ h1 {
     to {opacity: 1;}
 }
 
-/* Container Penyeimbang Posisi Tombol CTA */
-.cta-wrapper {
-    padding: 40px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Tombol Aksi */
-.cta-button {
-    display: inline-block;
-    margin-top: 0;
-    padding: 15px 30px;
-    border: 1px solid var(--gold);
-    color: var(--gold);
-    text-decoration: none;
-    transition: 0.3s;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.cta-button:hover {
-    background: var(--gold);
-    color: white;
-}
-
-.api-note {
-    font-size: 18px;
-    color: var(--gold);
-    margin: 0 20px 20px 20px;
-}
-
-footer {
-    padding: 40px;
-    font-size: 1.2rem;
-    color: var(--gold);
-}
+.cta-wrapper { padding: 40px 0; display: flex; justify-content: center; }
+.cta-button { padding: 15px 30px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; text-transform: uppercase; }
+.api-note { font-size: 18px; color: var(--gold); margin: 0 20px 20px 20px; }
+footer { padding: 40px; font-size: 1.2rem; color: var(--gold); }
