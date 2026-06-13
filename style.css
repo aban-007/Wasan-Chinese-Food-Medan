@@ -17,7 +17,7 @@ body {
 
 /* Updated Header Alignment */
 .header-right {
-    padding: 2mm 20px 5mm 20px;
+    padding: 2mm 20px 5mm 30px;
     border-bottom: 1px solid var(--gold);
     text-align: right;
 }
